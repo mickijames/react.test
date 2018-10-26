@@ -1,0 +1,63 @@
+.ui.header {
+    padding: 1em;
+
+    >.image:not(.icon), .ui.header>img {
+        width: auto;
+    }
+
+    h1.inverted {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .fixed {
+        left: inherit;
+    }
+
+    i.icon:only-child {
+        font-size: 2rem;
+        padding-top: .5em;
+        width: 1em;
+        height: 1.25em;
+    }
+ }
+.no-pad {
+    padding: 0;
+    width: 100vw;
+}
+
+.header.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.top.shade::before {
+    background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5) 10%, rgba(0,0,0,.2) 100%);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -25%;
+}
+
+.bg-image {
+    background: center / cover url("./img/computer.jpg");
+    height: 100vh;
+}
+
+@media (max-width: 497px) {
+    p {
+        font-size: 1.25em;
+    }
+}

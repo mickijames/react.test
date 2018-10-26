@@ -1,0 +1,82 @@
+.ui.header {
+  padding: 1em;
+}
+
+.ui.header > .image:not(.icon), .ui.header .ui.header > img {
+  width: auto;
+}
+
+.ui.header h1.inverted {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.ui.header .fixed {
+  left: inherit;
+}
+
+.ui.header i.icon:only-child {
+  font-size: 2rem;
+  padding-top: .5em;
+  width: 1em;
+  height: 1.25em;
+}
+
+.no-pad {
+  padding: 0;
+  width: 100vw;
+}
+
+.header.container {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.top.shade::before {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), color-stop(10%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.2)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0.2) 100%);
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -25%;
+}
+
+.bg-image {
+  background: center/cover url("./img/computer.jpg");
+  height: 100vh;
+}
+
+@media (max-width: 497px) {
+  p {
+    font-size: 1.25em;
+  }
+}
+/*# sourceMappingURL=App.css.map */
