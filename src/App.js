@@ -9,18 +9,40 @@ import {
     Menu
 } from 'semantic-ui-react';
 import $ from 'jquery';
+import './scripts/vendor/jquery.scrollDetection';
+
 import Video from './components/Video';
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import beachy from './img/bw+g.jpg';
-
+    
 // TODO: figure out scrolling so it only shows a section at a time
-
-//***** TODO: fix header so it doesn't show white at the top of the screen
+// function handleScroll(e, { sections, pos }) {
+//     this.setState({ curSection: pos });
+//     $.scrollDetection({
+//         scrollDown: function() {
+//           // ...
+//           this.setState({ scrollPos: pos++ })
+//           console.log(pos);
+//         },
+//         scrollUp: function() {
+//           // ...
+//           this.setState({ scrollPos: pos-- })
+//           console.log(pos);
+//         }
+//   });
+//   e.handleItemClick(sections[pos].name);
+// }
 
 class App extends Component {
-    state = { activeItem: "home" };    
+    state = { 
+        // reconfigure sections and active item to use numbers instead of names for scrolling to work too
+        activeItem: 'home',
+        sections: ['home', 'about', 'projects', 'contact'],
+        curSection: 0
+    };
+
     handleItemClick = (e, { name }) => {
         this.setState({ activeItem: name });
         $('html, body').animate({
@@ -28,6 +50,7 @@ class App extends Component {
             }, 400
         );
     }
+
     render() {
         const { activeItem } = this.state;
         return (
