@@ -1,25 +1,44 @@
-.ui.header {
+.ui .top.fixed.menu {
+  left: inherit;
+}
+
+.ui .header {
   padding: 1em;
 }
 
-.ui.header > .image:not(.icon), .ui.header .ui.header > img {
+.ui .header > .image:not(.icon), .ui .header .ui.header > img {
   width: auto;
+  height: 300px;
 }
 
-.ui.header h1.inverted {
+.ui .header h1.inverted {
   font-size: 2.5rem;
   text-align: center;
 }
 
-.ui.header .fixed {
-  left: inherit;
-}
-
-.ui.header i.icon:only-child {
+.ui .header i.icon:only-child {
   font-size: 2rem;
   padding-top: .5em;
   width: 1em;
   height: 1.25em;
+}
+
+.text {
+  padding-bottom: 1.5rem;
+}
+
+.page-height {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .no-pad {
@@ -69,14 +88,26 @@
   left: -25%;
 }
 
-.bg-image {
-  background: center/cover url("./img/computer.jpg");
-  height: 100vh;
-}
-
 @media (max-width: 497px) {
   p {
     font-size: 1.25em;
   }
+}
+
+.fullscreen-bg {
+  background: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 /*# sourceMappingURL=App.css.map */
